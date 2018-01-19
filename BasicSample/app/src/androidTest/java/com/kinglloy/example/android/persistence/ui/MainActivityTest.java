@@ -25,7 +25,11 @@ import java.util.concurrent.TimeoutException;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.not;
 
 /**
  * @author jinyalin
@@ -79,7 +83,14 @@ public class MainActivityTest {
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
 
         drain();
-//        onView(withContentDescription(R.string.comm))
+        // Then the second screen with the comments should appear.
+        onView(withContentDescription(R.string.cd_comments_list))
+                .check(matches(isDisplayed()));
+
+        drain();
+        // Then the second screen with the comments should appear.
+        onView(withContentDescription(R.string.cd_product_name))
+                .check(matches(not(withText(""))));
     }
 
     private void drain() throws TimeoutException, InterruptedException {
