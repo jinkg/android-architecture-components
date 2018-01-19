@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="item_horizontal_margin">8dp</dimen>
-
+    <dimen name="comment_horizontal_margin">16dp</dimen>
+    <dimen name="comment_padding">8dp</dimen>
+    <dimen name="comment_minHeight">64dp</dimen>
 </resources>

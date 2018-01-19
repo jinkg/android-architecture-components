@@ -1,4 +1,4 @@
-package com.kinglloy.example.android.persistence.videmodel;
+package com.kinglloy.example.android.persistence.viewmodel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;

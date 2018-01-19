@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.kinglloy.example.android.persistence.R;
 import com.kinglloy.example.android.persistence.databinding.ListFragmentBinding;
-import com.kinglloy.example.android.persistence.videmodel.ProductListViewModel;
+import com.kinglloy.example.android.persistence.viewmodel.ProductListViewModel;
 
 /**
  * @author jinyalin

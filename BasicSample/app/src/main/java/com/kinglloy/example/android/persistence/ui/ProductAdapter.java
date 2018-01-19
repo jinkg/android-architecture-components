@@ -32,7 +32,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void setProductList(final List<? extends Product> productList) {
         if (mProductList == null) {
             mProductList = productList;
-            notifyItemRangeChanged(0, productList.size());
+            notifyItemRangeInserted(0, productList.size());
         } else {
             DiffUtil.DiffResult result = DiffUtil.calculateDiff(new DiffUtil.Callback() {
                 @Override
