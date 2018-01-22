@@ -6,10 +6,17 @@ ext.deps = [:]
 def versions = [:]
 versions.arch = hasProperty("ARCH_VERSION") ? getProperty("ARCH_VERSION") : "1.0.0"
 versions.support = "26.1.0"
+versions.junit = "4.12"
 versions.espresso = "3.0.1"
+versions.mockito = "2.7.19"
+versions.mockito_all = "1.10.19"
+versions.dexmaker = "2.2.0"
 versions.android_gradle_plugin = "3.0.0"
+versions.rxjava2 = "2.1.3"
+versions.rx_android = "2.0.1"
 versions.atsl_runner = "1.0.1"
 versions.atsl_rules = "1.0.1"
+versions.hamcrest = "1.3"
 def deps = [:]
 
 def support = [:]
@@ -19,6 +26,7 @@ support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
 support.cardview = "com.android.support:cardview-v7:$versions.support"
 support.design = "com.android.support:design:$versions.support"
 support.v4 = "com.android.support:support-v4:$versions.support"
+support.core_utils = "com.android.support:support-core-utils:$versions.support"
 deps.support = support
 
 def room = [:]
@@ -50,8 +58,17 @@ atsl.runner = "com.android.support.test:runner:$versions.atsl_runner"
 atsl.rules = "com.android.support.test:rules:$versions.atsl_runner"
 deps.atsl = atsl
 
-deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+def mockito = [:]
+mockito.core = "org.mockito:mockito-core:$versions.mockito"
+mockito.all = "org.mockito:mockito-all:$versions.mockito_all"
+deps.mockito = mockito
 
+deps.dexmaker = "com.linkedin.dexmaker:dexmaker-mockito:$versions.dexmaker"
+deps.junit = "junit:junit:$versions.junit"
+deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+deps.hamcrest = "org.hamcrest:hamcrest-all:$versions.hamcrest"
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 ext.deps = deps
 
 def build_versions = [:]
