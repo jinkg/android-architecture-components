@@ -46,6 +46,7 @@ dependencies {
     testImplementation deps.junit
     testImplementation deps.hamcrest
     testImplementation deps.arch_core.testing
+    testImplementation deps.mockito.core
     testImplementation deps.mockito.all
 
     // Resolve conflicts between main and local unit tests
