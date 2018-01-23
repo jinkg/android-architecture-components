@@ -8,7 +8,7 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "com.kinglloy.example.android.observability.kotlin"
+        applicationId "com.kinglloy.example.android.kotlin"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
