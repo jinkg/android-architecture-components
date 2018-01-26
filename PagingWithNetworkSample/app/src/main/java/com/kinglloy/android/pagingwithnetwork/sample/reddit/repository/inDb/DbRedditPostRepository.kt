@@ -17,6 +17,8 @@ import retrofit2.Response
 import java.util.concurrent.Executor
 
 /**
+ * Repository implementation that uses a database PagedList + a boundary callback to return a
+ * listing that loads in pages.
  * @author jinyalin
  * @since 2018/1/26.
  */
