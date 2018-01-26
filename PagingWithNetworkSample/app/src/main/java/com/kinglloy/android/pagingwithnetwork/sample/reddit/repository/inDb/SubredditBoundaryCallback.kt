@@ -5,7 +5,7 @@ import android.arch.paging.PagingRequestHelper
 import android.support.annotation.MainThread
 import com.kinglloy.android.pagingwithnetwork.sample.reddit.api.RedditApi
 import com.kinglloy.android.pagingwithnetwork.sample.reddit.vo.RedditPost
-import com.kinglloy.android.pagingwithnetwork.sample.util.createStatusLiveData
+import com.kinglloy.android.pagingwithnetwork.sample.reddit.util.createStatusLiveData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

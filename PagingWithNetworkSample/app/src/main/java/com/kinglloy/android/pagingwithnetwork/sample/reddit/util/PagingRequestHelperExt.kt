@@ -1,4 +1,4 @@
-package com.kinglloy.android.pagingwithnetwork.sample.util
+package com.kinglloy.android.pagingwithnetwork.sample.reddit.util
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
