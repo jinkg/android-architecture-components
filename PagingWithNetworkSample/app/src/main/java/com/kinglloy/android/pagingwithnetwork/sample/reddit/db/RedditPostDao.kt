@@ -16,7 +16,7 @@ interface RedditPostDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(posts: List<RedditPost>)
 
-    @Query("SELECT * FROM posts WHERE subreddit = :subreddit ORDER BY index In Response ASC")
+    @Query("SELECT * FROM posts WHERE subreddit = :subreddit ORDER BY indexInResponse ASC")
     fun postsBySubreddit(subreddit: String): DataSource.Factory<Int, RedditPost>
 
     @Query("DELETE FROM posts WHERE subreddit = :subreddit")

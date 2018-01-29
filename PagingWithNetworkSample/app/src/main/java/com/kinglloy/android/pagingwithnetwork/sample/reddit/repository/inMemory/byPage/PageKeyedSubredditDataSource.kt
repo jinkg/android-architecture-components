@@ -88,7 +88,7 @@ class PageKeyedSubredditDataSource(
                 limit = params.requestedLoadSize
         )
         networkState.postValue(NetworkState.LOADING)
-        networkState.postValue(NetworkState.LOADING)
+        initialLoad.postValue(NetworkState.LOADING)
 
         // triggered by a refresh, we better execute sync
         try {
