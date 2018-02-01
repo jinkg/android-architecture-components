@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Persistence Migrations Sample</string>
+    <string name="update_user">Update username</string>
+</resources>
