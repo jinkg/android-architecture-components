@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        applicationId "com.kinglloy.android.contentprovidersample"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // Test
+    testImplementation deps.junit
+    androidTestImplementation(deps.espresso.core, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // Support Libraries
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+
+    // App Toolkit
+    implementation deps.lifecycle.extensions
+    implementation deps.room.runtime
+    annotationProcessor deps.lifecycle.compiler
+    annotationProcessor deps.room.compiler
+}
